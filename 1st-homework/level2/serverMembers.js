@@ -43,13 +43,6 @@ const serverMembers = [
     }   
 ]
 
-const members = function (a){
-    var member = []
-    for(var i = 0; i < a.length; i++){
-        member.push(a[i]);
-    }
-    return member
-}
+module.exports = serverMembers
 
-console.log(members(serverMembers));
 
