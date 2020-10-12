@@ -78,8 +78,8 @@ console.log('countriesLengths: ',countriesLengths);
 // 2-12 reduce map은 배열을 반환할때 사용했지만 reduce는 값 하나를 반환할때 주로 사용 대표적인 예시로 1 ~ n 까지 더하기
 var number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var sum = number.reduce( (previousValue, currentValue) => {
-  console.log(`previousValue: ${previousValue}, currentValue: ${currentValue}`);
-  return previousValue + currentValue;
+    console.log(`previousValue: ${previousValue}, currentValue: ${currentValue}`);
+    return previousValue + currentValue;
 });
 
 console.log('sum = ', sum);
