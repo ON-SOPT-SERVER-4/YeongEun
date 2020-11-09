@@ -8,7 +8,6 @@ let usersDB = require('../../modules/users');
 
 router.post('/signup', (req, res) => {
     const {id, password} = req.body; // 1. req.body에서 데이터 가져오기
-    console.log(id)
     //2. request data 확인하기, id 또는 password data가 없다면 NullValue 반환
     if (!id){
         console.log('id가 입력되지 않았습니다.')
@@ -17,7 +16,8 @@ router.post('/signup', (req, res) => {
     if (!password){
         console.log('password가 입력되지 않았습니다.')
         return res.status(statusCode.BAD_REQUEST).send(util.fail(statusCode.BAD_REQUEST,responseMessage.NULL_VALUE));
-    } 
+    }
+    console.log(id);
     //3. 존재하는 아이디인지 확인하기. 이미 존재하는 아이디면 ALREADY ID 반환
     const userId = usersDB.find(userId => user.id == id);
     if(userId){
@@ -46,7 +46,7 @@ router.post('/signin', (req, res) => {
         return res.status(statusCode.BAD_REQUEST).send(util.fail(statusCode.BAD_REQUEST, responseMessage.NULL_VALUE));
     }
     //3. 존재하는 아이디인지 확인하기. 존재하지 않는 아이디면 NO USER 반환
-    const userIdx = userDB.findIndex(user => user.id === id)
+    const userIdx = userDB.findIndex(user => user.id ===id)
 
     if (userIdx === -1){
         console.log('해당 id는 존재하지 않습니다.');
