@@ -13,13 +13,13 @@ const vc = "321";
 
 console.log('vc : ${vc}');
 
-if(true){
+if (true) {
     var x = 'var';
 }
 console.log('var : ${x}');
+console.log('let: ${y}')
 
-if(true){
+if (true) {
     let y = 'let';
 }
 console.log('let : ${y}');
-
